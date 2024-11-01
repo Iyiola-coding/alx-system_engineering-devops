@@ -9,7 +9,7 @@ i="0"
 while [ $i -lt 10 ]; do
   if [ $i -eq 3 ]; then
 	  echo "$var2"
-  elif [ $i -eq 8 ]; then
+  elif [ $i -eq 7 ]; then
 	  echo "$var3"
   else
 	  echo "$var1"
