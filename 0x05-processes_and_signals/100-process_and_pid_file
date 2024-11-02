@@ -8,5 +8,4 @@ clean_up() {
 
 echo $$ > "/var/run/myscript.pid"
 
-# Set up a trap to call clean_up on script exit
 trap clean_up EXIT
