@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-#i love you
-clean_up='rm /var/run/myscript.pid; exit $?'
+# I love you
+
+clean_up() {
+    rm /var/run/myscript.pid
+    exit $?
+}
 
 echo $$ > "/var/run/myscript.pid"
+
+# Set up a trap to call clean_up on script exit
+trap clean_up EXIT
