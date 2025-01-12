@@ -10,8 +10,10 @@ file_line {'Turn off passwd auth':
 	match   => 'PasswordAuthentication yes',
 	replace => 'true',
 }
+
 file_line {'Declare identity file':
         path    => '/etc/ssh/ssh_config',
         line    => 'IdentityFile ~/.ssh/school',
         match   => '^IdentityFile',
         ensure  => 'present',
+}
