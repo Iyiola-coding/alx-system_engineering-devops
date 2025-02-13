@@ -32,12 +32,13 @@ def get_employee_todos_progress(employee_id):
 
             """json blocks"""
             tasks = [
-                    {"task": task["title"],
-                     "completed": task["completed"],
-                     "username": employee_name
-                        }
+                    {
+                        "task": task["title"],
+                        "completed": task["completed"],
+                        "username": employee_name
+                    }
                     for task in json_todos_list
-                    ]
+            ]
             new_json_data = {str(employee_id): tasks}
 
             """exporting data"""
